@@ -13,8 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-include "backend/routes.php";
-include "frontend/routes.php";
+include  base_path("routes/backend/routes.php");
+include  base_path("routes/frontend/routes.php");
+
 
 
 

@@ -312,7 +312,7 @@
     <script src="{{asset("assets/backend/plugins//apex/apexcharts.min.js")}}"></script>
     <script src="{{asset("assets/backend/js/dashboard/dash_1.js")}}"></script>
     <!-- BEGIN PAGE LEVEL PLUGINS/CUSTOM SCRIPTS -->
-    @stack('customCss')
+    @stack('customJs')
 
 </body>
 

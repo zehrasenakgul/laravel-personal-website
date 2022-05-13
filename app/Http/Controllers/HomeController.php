@@ -13,6 +13,5 @@ class HomeController extends Controller
         $works = Work::limit(3)->get();
         return view("frontend.home.index",compact("works"));
     }
-
     
 }

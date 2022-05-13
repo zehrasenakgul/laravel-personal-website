@@ -1,8 +1,15 @@
 <?php 
 
 Route::redirect('/', '/anasayfa');
-Route::get('/anasayfa', "App\Http\Controllers\HomeController@home")->name(".home");
-Route::get('/portfolyo', "App\Http\Controllers\WorkController@workGetPortfolio")->name(".workGetPortfolio");
+
+Route::group(['prefix' => 'anasayfa',"as" => "anasayfa", "namespace" =>"App\Http\Controllers" ], function() {
+    Route::get('/', "HomeController@home")->name(".home");
+});
+
+Route::group(['prefix' => 'portfolyo',"as" => "portfolyo", "namespace" =>"App\Http\Controllers" ], function() {
+    Route::get('/', "WorkController@workGetPortfolio")->name(".workGetPortfolio");
+});
+
 
 
 

@@ -32,10 +32,10 @@
 @endsection
 
 @push('customJs')
+<script src="{{ asset('assets/backend/js/scrollspyNav.js') }}"></script>
 @endpush
 
 @push('customCss')
-    <script src="{{ asset('assets/backend/js/scrollspyNav.js') }}"></script>
     <link href="{{ asset('assets/backend/css/tables/table-basic.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('assets/backend/css/scrollspyNav.css') }}" rel="stylesheet" type="text/css" />
 @endpush
