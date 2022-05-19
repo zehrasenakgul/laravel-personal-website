@@ -2,7 +2,7 @@
 @section('content')
     <div class="layout-px-spacing">
         <div class=" layout-top-spacing">
-            <button class="btn btn-warning mb-2 mr-2" id="newSetting">
+            <button class="btn btn-warning mb-2 mr-2" id="newmenu">
                 <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none"
                     stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1">
                     <line x1="12" y1="5" x2="12" y2="19"></line>
@@ -13,20 +13,20 @@
             <div class="table-responsive">
                 <table class="table table-bordered table-hover table-condensed mb-4">
                     <thead>
-                        <tr id="settingTableHeader">
+                        <tr id="menuTableHeader">
                             <th>Anahtar</th>
                             <th>Değer</th>
                             <th>Sil</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($settings as $setting)
+                        @foreach ($menus as $menu)
                             <tr>
-                                <td>{{ $setting->key }}</td>
-                                <td> <input class="form-control settingInput" type="text" value="{{ $setting->value }}"
-                                        name="{{ $setting->key }}"></td>
-                                <td><button class="btn btn-danger settingDelete"
-                                        data-key="{{ $setting->key }}">Sil</button></td>
+                                <td>{{ $menu->name }}</td>
+                                <td> <input class="form-control menuInput" type="text" route="{{ $menu->route }}"
+                                        name="{{ $menu->name }}"></td>
+                                <td><button class="btn btn-danger menuDelete" data-name="{{ $menu->name }}">Sil</button>
+                                </td>
                             </tr>
                         @endforeach
                     </tbody>
@@ -39,15 +39,15 @@
 @push('customJs')
     <script>
         $(document).ready(function() {
-            $(".settingInput").on("change", function() {
+            $(".menuInput").on("change", function() {
                 var input = $(this);
                 $.ajax({
                     type: "POST",
-                    url: "{{ url('admin/settings/update') }}",
+                    url: "{{ url('admin/menus/update') }}",
                     data: {
                         _token: "{{ csrf_token() }}",
-                        key: input.attr("name"),
-                        value: input.val()
+                        name: input.attr("name"),
+                        route: input.val()
                     },
 
                     success: function(response) {
@@ -63,41 +63,41 @@
                 });
             });
 
-            $("#newSetting").click(function() {
+            $("#newmenu").click(function() {
 
                 var data = "<tr>\n" +
-                    "<td> <input class=\"form-control\" type=\"text\" name=\"key\" id='newSettingKey'></td>" +
-                    "<td> <input class=\"form-control\" type=\"text\" name=\"key\" id='newSettingValue'></td>" +
+                    "<td> <input class=\"form-control\" type=\"text\" name=\"name\" id='newmenuname'></td>" +
+                    "<td> <input class=\"form-control\" type=\"text\" name=\"name\" id='newmenuroute'></td>" +
                     "</tr>";
 
-                $("#settingTableHeader").after(data);
+                $("#menuTableHeader").after(data);
             });
 
-            var key = false;
-            var value = false;
+            var name = false;
+            var route = false;
 
-            $(document).on("change", "#newSettingKey", function() {
-                if ($(this).val().length > 3 && $("#newSettingValue").val().length > 3) {
-                    newSetting()
+            $(document).on("change", "#newmenuname", function() {
+                if ($(this).val().length > 3 && $("#newmenuroute").val().length > 3) {
+                    newmenu()
                 }
             });
-            $(document).on("change", "#newSettingValue", function() {
-                if ($(this).val().length > 3 && $("#newSettingKey").val().length > 3) {
-                    newSetting()
+            $(document).on("change", "#newmenuroute", function() {
+                if ($(this).val().length > 3 && $("#newmenuname").val().length > 3) {
+                    newmenu()
                 }
             });
 
 
-            function newSetting() {
-                var key = $("#newSettingKey").val();
-                var value = $("#newSettingValue").val();
+            function newmenu() {
+                var name = $("#newmenuname").val();
+                var route = $("#newmenuroute").val();
                 $.ajax({
                     type: "post",
-                    url: "{{ url('admin/settings/add') }}",
+                    url: "{{ url('admin/menus/add') }}",
                     data: {
                         _token: "{{ csrf_token() }}",
-                        key: key,
-                        value: value
+                        name: name,
+                        route: route
                     },
                     success: function(response) {
                         if (response.status == "success") {
@@ -113,14 +113,14 @@
                 })
             };
 
-            $(".settingDelete").click(function() {
+            $(".menuDelete").click(function() {
                 var button = $(this);
                 $.ajax({
                     type: "post",
-                    url: "{{ url('admin/settings/delete') }}",
+                    url: "{{ url('admin/menus/delete') }}",
                     data: {
                         _token: "{{ csrf_token() }}",
-                        key: button.data("key")
+                        name: button.data("name")
                     },
                     success: function(response) {
                         if (response.status == "success") {

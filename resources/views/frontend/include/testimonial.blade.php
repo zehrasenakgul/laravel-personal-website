@@ -1,59 +1,58 @@
-<section class="section section-padding-equal">
+<section class="section bg-color-dark section-padding-equal">
     <div class="container">
-        <div class="section-heading heading-left">
-            <span class="subtitle">Testimonial</span>
-            <h2 class="title">From getting started</h2>
-            <p>Nulla facilisi. Nullam in magna id dolor blandit rutrum eget vulputate augue sed eu leo eget risus imperdiet.</p>
+        <div class="section-heading  heading-light heading-left">
+            <h2 class="title">Değerlendirmeler</h2>
         </div>
-        <div class="row">
+        <div class="row ">
             <div class="col-lg-4" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">
                 <div class="testimonial-grid">
-                    <span class="social-media"><img src="{{asset("assets/frontend/media/icon/google-2.png")}}" alt="google"></span>
-                    <p>“ Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. ”</p>
+                    <p class="text-white">“ Her konuda çok yardımcı oldu ve işi kusursuz yaptı. Her zaman
+                        ulaşılabilir olması, kibarlığı, işi zamanında teslim etmeside ekstra. Çok teşekkür ediyorum. Bir
+                        dahaki işte gözüm kapalı sizinle çalışmayı çok isterim.”</p>
                     <div class="author-info">
                         <div class="thumb">
-                            <img src="{{asset("assets/frontend/media/testimonial/testimonial-1.png")}}" alt="Google Review">
+                            <img src="https://bgcp.bionluk.com/images/avatar/200x200/3eb708b8-03d6-426f-8307-4dd7a36c2aef.jpeg" width="50"
+                                alt="degerlendirme">
                         </div>
                         <div class="content">
-                            <span class="name">Darrell Steward</span>
-                            <span class="designation">Executive Chairman</span>
+                            <span class="name text-white">burrcutnc</span>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">
                 <div class="testimonial-grid">
-                    <span class="social-media"><img src="{{asset("assets/frontend/media/icon/fb-2.png")}}" alt="Facebook"></span>
-                    <p>“ Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. ”</p>
+                    <p class="text-white">“ Zehra hanım güzel iş yapıyor her şeyde olduğu gibi bir kadının eli
+                        değmesi gerçekten farkı göz önüne çıkarıyor almış olduğum bu hizmetten sonuna kadar memnunum kesinlikle tavsiye ederim. ”
+                    </p>
                     <div class="author-info">
                         <div class="thumb">
-                            <img src="{{asset("assets/frontend/media/testimonial/testimonial-2.png")}}" alt="Google Review">
+                            <img src="https://bgcp.bionluk.com/images/avatar/200x200/6933aac5-a48f-4cd7-91f9-5167d230a07a.jpeg" width="50"
+                                alt="degerlendirme">
                         </div>
                         <div class="content">
-                            <span class="name">Savannah Nguyen</span>
-                            <span class="designation">Executive Chairman</span>
+                            <span class="name text-white">durmusulu</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="300">
+            <div class="col-lg-4" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">
                 <div class="testimonial-grid">
-                    <span class="social-media"><img src="{{asset("assets/frontend/media/icon/yelp-2.png")}}" alt="Yelp"></span>
-                    <p>“ Donec metus lorem, vulputate at sapien sit amet, auctor iaculis lorem. In vel hendrerit nisi. Vestibulum eget risus velit. ”</p>
+                    <p class="text-white">“ Zehra Hanım ile yaptığımız ilk çalışmaydı. Kendisi hem işine verdiği
+                        özen hem de kurduğu samimi iletişim ile içimizi rahatlattı. İş bittiğinde ise
+                        beklediğimizin de üstünde mükemmel bir çalışma çıkardı. Her şey için çok teşekkürler.”
+                    </p>
                     <div class="author-info">
                         <div class="thumb">
-                            <img src="{{asset("assets/frontend/media/testimonial/testimonial-3.png")}}" alt="Google Review">
+                            <img src="https://bgcp.bionluk.com/images/avatar/200x200/0d937305-8306-4b5f-9eb8-a952114844e7.jpg" width="50"
+                                alt="degerlendirme">
                         </div>
                         <div class="content">
-                            <span class="name">Floyd Miles</span>
-                            <span class="designation">Executive Chairman</span>
+                            <span class="name text-white">emrecihancandir</span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <ul class="shape-group-4 list-unstyled">
-        <li class="shape-1"><img src="{{asset("assets/frontend/media/others/bubble-1.png")}}" alt="Bubble"></li>
-    </ul>
 </section>

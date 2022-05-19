@@ -2,9 +2,11 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Menu;
 use App\Models\Setting;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 
 class Share
 {
@@ -23,9 +25,12 @@ class Share
         foreach ($settings as $setting) {
             $settingArr[$setting->key] = $setting->value;
         }
-        dd($settingArr);
+        $menus = Menu::all();
+        $data["settings"] = $settingArr;
+        $data["menus"] = $menus;
 
         View::share($data);
+
         return $next($request);
     }
 }

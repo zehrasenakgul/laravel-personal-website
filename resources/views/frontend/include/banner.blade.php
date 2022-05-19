@@ -3,15 +3,15 @@
         <div class="row align-items-center">
             <div class="col-lg-12">
                 <div class="banner-content">
-                    <span class="subtitle text-md-center" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">Zehra Sena AKGÜL</span>
-                    <h1 class="title  text-md-center" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">Full Stack Developer</h1>
+                    <span class="subtitle text-center" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">Zehra Sena AKGÜL</span>
+                    <h1 class="title  text-center" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">Full Stack Developer</h1>
                     <div class="pricing-billing-duration">
                         <ul>
                             <li class="nav-item">
                                 <button onclick="location.href='portfolyo'" class="nav-link active" id="yearly-plan-btn" type="submit">Portfolyo</button>
                             </li>
                             <li class="nav-item">
-                                <button onclick="location.href='ben-kimim'" class="nav-link" id="monthly-plan-btn" type="submit">
+                                <button onclick="location.href='hakkimda'" class="nav-link" id="monthly-plan-btn" type="submit">
                                     Ben Kimim ?</button>
                             </li>
                         </ul>
