@@ -7,11 +7,15 @@ use App\Http\Controllers\Backend\SkillsController;
 use App\Http\Controllers\Backend\StaticController;
 use App\Http\Controllers\Backend\WorkController;
 
-Route::group(["prefix" => "admin", "as" => "backend", "namespace" => "App\Http\Controllers"], function () {
+Route::redirect('/admin', '/admin/login');
 
-    Route::get("/login", "Auth\LoginController@showLoginForm")->name("backend.login.index");
-    Route::post("/login", "Auth\LoginController@login");
-    Route::post("/logout", "Auth\LoginController@logout")->name("backend.logout.index");;
+Route::get("/admin/login", "App\Http\Controllers\Auth\LoginController@showLoginForm")->name("backend.login.index");
+Route::post("/admin/login", "App\Http\Controllers\Auth\LoginController@login");
+Route::get("/admin/logout", "App\Http\Controllers\Auth\LoginController@logout")->name("backend.logout.index");
+
+Route::group(["prefix" => "admin", "as" => "backend", "middleware" => "auth"], function () {
+
+    Route::get("/dashboard", "App\Http\Controllers\Backend\BackendHomeController@home")->name("backend.home.index");
 
     Route::controller(SettingsController::class)->group(function () {
         Route::group(["prefix" => "settings"], function () {

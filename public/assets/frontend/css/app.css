@@ -7334,7 +7334,6 @@ body.op-modal-open {
     -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
-    float: right;
 }
 
 .axil-header.header-style-3
@@ -10911,3 +10910,4 @@ body.op-modal-open {
         padding-bottom: 0;
     }
 }
+
