@@ -1,12 +1,9 @@
 <?php
-
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Mail\ContactMail;
 use App\Models\Page;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 
 class StaticController extends Controller
@@ -80,17 +77,4 @@ class StaticController extends Controller
 
     }
 
-    public function pages($slug)
-    {
-        $page = Page::where("slug", $slug)->first();
-        $modules = $page->modules;
-        return view("frontend.static." . $slug, compact("page", "modules"));
-    }
-
-    public function sendMessage(Request $request)
-    {
-        $email = new ContactMail($request);
-        Mail::to("zehrasenakgul@gmail.com")->send($email);
-
-    }
 }

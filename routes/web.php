@@ -12,12 +12,13 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
+Route::get('/home', function(){
+    return redirect(route("frontend.home.index"));
+})->name(".home");
 
 include  base_path("routes/backend/routes.php");
 include  base_path("routes/frontend/routes.php");
-
-
-
 
 
 

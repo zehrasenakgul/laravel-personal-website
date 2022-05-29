@@ -1,7 +1,7 @@
 <?php
+namespace App\Http\Controllers\Backend;
 
-namespace App\Http\Controllers;
-
+use App\Http\Controllers\Controller;
 use App\Http\Requests\postRequest;
 use App\Models\Work;
 use Illuminate\Http\Request;

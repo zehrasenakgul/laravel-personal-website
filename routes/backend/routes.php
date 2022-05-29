@@ -1,15 +1,17 @@
 <?php
 
-use App\Http\Controllers\MenuController;
-use App\Http\Controllers\ModuleController;
-use App\Http\Controllers\SettingsController;
-use App\Http\Controllers\SkillsController;
-use App\Http\Controllers\StaticController;
-use App\Http\Controllers\WorkController;
+use App\Http\Controllers\Backend\MenuController;
+use App\Http\Controllers\Backend\ModuleController;
+use App\Http\Controllers\Backend\SettingsController;
+use App\Http\Controllers\Backend\SkillsController;
+use App\Http\Controllers\Backend\StaticController;
+use App\Http\Controllers\Backend\WorkController;
 
 Route::group(["prefix" => "admin", "as" => "backend", "namespace" => "App\Http\Controllers"], function () {
 
-    Route::get("/", "BackendHomeController@home")->name(".home");
+    Route::get("/login", "Auth\LoginController@showLoginForm")->name("backend.login.index");
+    Route::post("/login", "Auth\LoginController@login");
+    Route::post("/logout", "Auth\LoginController@logout")->name("backend.logout.index");;
 
     Route::controller(SettingsController::class)->group(function () {
         Route::group(["prefix" => "settings"], function () {

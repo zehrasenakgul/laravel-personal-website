@@ -14,8 +14,8 @@
                 <table class="table table-bordered table-hover table-condensed mb-4">
                     <thead>
                         <tr id="menuTableHeader">
-                            <th>Anahtar</th>
-                            <th>Değer</th>
+                            <th>Menü</th>
+                            <th>Url</th>
                             <th>Sil</th>
                         </tr>
                     </thead>
@@ -23,8 +23,8 @@
                         @foreach ($menus as $menu)
                             <tr>
                                 <td>{{ $menu->name }}</td>
-                                <td> <input class="form-control menuInput" type="text" route="{{ $menu->route }}"
-                                        name="{{ $menu->name }}"></td>
+                                <td> <input class="form-control menuInput" type="text" name="{{ $menu->name }}"
+                                        value="{{ $menu->route }}"></td>
                                 <td><button class="btn btn-danger menuDelete" data-name="{{ $menu->name }}">Sil</button>
                                 </td>
                             </tr>
@@ -67,7 +67,7 @@
 
                 var data = "<tr>\n" +
                     "<td> <input class=\"form-control\" type=\"text\" name=\"name\" id='newmenuname'></td>" +
-                    "<td> <input class=\"form-control\" type=\"text\" name=\"name\" id='newmenuroute'></td>" +
+                    "<td> <input class=\"form-control\" type=\"text\" name=\"route\" id='newmenuroute'></td>" +
                     "</tr>";
 
                 $("#menuTableHeader").after(data);

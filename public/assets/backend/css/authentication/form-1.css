@@ -5,15 +5,8 @@ body {
     padding: 0;
     background: #060818;
 }
-.form-container {
-    display: flex;
-}
-.form-form {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%;
-}
+
+
 .form-form .form-form-wrap {
     max-width: 480px;
     margin: 0 auto;
@@ -162,7 +155,7 @@ body {
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    
+
     -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
