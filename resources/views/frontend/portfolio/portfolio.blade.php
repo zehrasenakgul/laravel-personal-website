@@ -1,4 +1,4 @@
-@extends("layouts.frontend")
+@extends('layouts.frontend')
 @section('content')
 
     <head>
@@ -45,6 +45,13 @@
                             </div>
                         </div>
                     @endforeach
+
+                </div>
+
+
+                <div class="pagination justify-content-center mt--20" >
+                    {{ $works->links('vendor.pagination.bootstrap-4') }}
+
                 </div>
             </div>
         </div>

@@ -65,7 +65,7 @@
                                 </div>
                                 <ul class="mainmenu">
                                     @foreach ($menus as $menu)
-                                        <li><a href="{{ $menu->route }}">{{ $menu->name }}</a></li>
+                                        <li><a href="/{{ $menu->route }}">{{ $menu->name }}</a></li>
                                     @endforeach
                                 </ul>
                             </nav>

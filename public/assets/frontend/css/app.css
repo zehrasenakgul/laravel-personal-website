@@ -1127,7 +1127,6 @@ Pagination
 --------------------------*/
 .pagination {
     margin-top: 80px;
-    width: 100%;
 }
 
 @media only screen and (max-width: 991px) {
