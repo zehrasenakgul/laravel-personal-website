@@ -4,7 +4,7 @@
             <div class="col-lg-12">
                 <div class="banner-content">
                     <span class="subtitle text-center" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="100">Zehra Sena AKGÜL</span>
-                    <h1 class="title  text-center" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">Full Stack Developer</h1>
+                    <h1 class="title  text-center" data-sal="slide-up" data-sal-duration="1000" data-sal-delay="200">Software Developer</h1>
                     <div class="pricing-billing-duration">
                         <ul>
                             <li class="nav-item">

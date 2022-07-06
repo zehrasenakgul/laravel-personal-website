@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('pages', function (Blueprint $table) {
             $table->increments("id");
             $table->string("title");
-            $table->string("description");
-            $table->string("keywords");
+            $table->text("description");
+            $table->text("keywords");
             $table->string("slug");
             $table->string("name");
             $table->timestamps();
